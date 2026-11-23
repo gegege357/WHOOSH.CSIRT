@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 270" fill="none">
+  <defs>
+    <clipPath id="hex">
+      <path d="M135 22L240 64V180C240 210 210 222 135 228C60 222 30 210 30 180V64L135 22Z" />
+    </clipPath>
+  </defs>
+  <path d="M135 22L240 64V180C240 210 210 222 135 228C60 222 30 210 30 180V64L135 22Z" fill="#111111" />
+  <path d="M135 22L240 64V112L135 70L30 112V64L135 22Z" fill="#D90429" />
+  <path d="M85 196L94 102C97 78 112 68 135 68C158 68 173 78 176 102L185 196H85Z" fill="#FFFFFF" />
+  <path d="M103 124L107 99C110 86 121 81 135 81C149 81 160 86 163 99L167 124Q135 128 103 124Z" fill="#111111" />
+  <path d="M93 146H177L180 166H90L93 146Z" fill="#D90429" />
+  <rect x="100" y="174" width="15" height="6" rx="3" fill="#111111" />
+  <rect x="155" y="174" width="15" height="6" rx="3" fill="#111111" />
+  <g clip-path="url(#hex)">
+    <path d="M74 204H196L204 218H66L74 204Z" fill="#D90429" />
+  </g>
+  <path d="M76 236Q135 252 194 236Q135 276 76 236Z" fill="#111111" />
+</svg>
