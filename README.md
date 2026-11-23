@@ -1,4 +1,4 @@
-# WHOOSH CSIRT — Portal Operasional & Konsol SOC
+# WHOOSH CSIRT — Portal Operasional Pengaduan Siber & Konsol SOC
 
 <p align="center">
   <img src="docs/images/logo-lockup.svg" alt="WHOOSH CSIRT — Incident Response Team" width="360">
