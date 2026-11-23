@@ -1,10 +1,56 @@
-node_modules
-dist
-.verify
-.data
-*.local
-.DS_Store
+# ==========================================
+# WHOOSH CSIRT — GITIGNORE
+# ==========================================
 
-# environment — berisi API key NVD, JANGAN dipush ke repository publik
+# Dependencies / Libraries
+node_modules/
+.pnp/
+.pnp.js/
+
+# Build output
+dist/
+build/
+out/
+
+# Local verification
+.verify/
+
+# Local application data
+.data/
+
+# Environment files (API keys / secrets)
 .env
 .env.*
+*.env
+*.env.*
+
+# Local configuration
+*.local
+*.local.*
+
+# Operating system files
+.DS_Store
+.DS_Store*
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# ==========================================
+# Other source files remain tracked
+# ==========================================
