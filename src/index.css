@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #d90429;
+  --color-brand-bright: #dc2626;
+  --color-brand-deep: #a4031f;
+  --color-brand-soft: #fde8ec;
+  --color-ink: #111111;
+  --color-ink-deep: #0f172a;
+  --color-paper: #f8fafc;
+  --color-line: #e2e8f0;
+  --color-amber-alert: #d97706;
+  --color-green-ok: #16a34a;
+
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", monospace;
+
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-pulse-dot: pulse-dot 1.6s ease-in-out infinite;
+  --animate-speed-line: speed-line 3.2s ease-in-out infinite;
+  --animate-scan: scan 5s linear infinite;
+  --animate-fade-up: fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-modal-in: modal-in 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-backdrop-in: backdrop-in 0.2s ease-out both;
+  --animate-radar: radar 2.4s ease-out infinite;
+  --animate-shake: shake 0.4s ease-in-out;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(217, 4, 41, 0.55); }
+    50% { opacity: 0.75; box-shadow: 0 0 0 6px rgba(217, 4, 41, 0); }
+  }
+  @keyframes speed-line {
+    0% { transform: translateX(-12%) scaleX(0.7); opacity: 0.25; }
+    50% { transform: translateX(6%) scaleX(1); opacity: 1; }
+    100% { transform: translateX(-12%) scaleX(0.7); opacity: 0.25; }
+  }
+  @keyframes scan {
+    0% { top: -10%; }
+    100% { top: 110%; }
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes modal-in {
+    from { opacity: 0; transform: translateY(18px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  @keyframes backdrop-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes radar {
+    0% { transform: scale(0.6); opacity: 0.8; }
+    100% { transform: scale(2.1); opacity: 0; }
+  }
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-6px); }
+    80% { transform: translateX(6px); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+  color: #111111;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+section[id] {
+  scroll-margin-top: 118px;
+}
+
+::selection {
+  background: #d90429;
+  color: #ffffff;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d90429 #f1f5f9;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d90429, #111111);
+  border-radius: 8px;
+  border: 2px solid #f1f5f9;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d90429;
+}
+
+.dark-scroll {
+  scrollbar-color: #d90429 #1e293b;
+}
+.dark-scroll::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+.dark-scroll::-webkit-scrollbar-thumb {
+  border-color: #1e293b;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.speed-stripes {
+  background-image: repeating-linear-gradient(
+    -55deg,
+    transparent 0px,
+    transparent 14px,
+    rgba(217, 4, 41, 0.08) 14px,
+    rgba(217, 4, 41, 0.08) 18px
+  );
+}
+
+.grid-paper {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.045) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.grid-dark {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.clip-slant {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%);
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.65;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

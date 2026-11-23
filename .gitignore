@@ -1,0 +1,10 @@
+node_modules
+dist
+.verify
+.data
+*.local
+.DS_Store
+
+# environment — berisi API key NVD, JANGAN dipush ke repository publik
+.env
+.env.*
