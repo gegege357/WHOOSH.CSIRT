@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 72" width="360" height="72" fill="none">
+  <!-- plate terang: lockup aslinya berteks #111 sehingga butuh latar kartu agar terbaca di tema gelap GitHub -->
+  <rect x="0.5" y="0.5" width="359" height="71" rx="12" fill="#FFFFFF" stroke="#E2E8F0" />
+
+  <g transform="translate(6, 6)">
+    <path d="M30 2L56 12V34C56 47.5 44.5 56.5 30 60C15.5 56.5 4 47.5 4 34V12L30 2Z" fill="#111111" />
+    <path d="M30 2L56 12V24L30 14L4 24V12L30 2Z" fill="#D90429" />
+    <path d="M18 44L22 22C23.5 16 26.5 14 30 14C33.5 14 36.5 16 38 22L42 44H18Z" fill="#FFFFFF" />
+    <path d="M22.5 23C24 18.5 26.8 17 30 17C33.2 17 36 18.5 37.5 23L36 28H24L22.5 23Z" fill="#111111" />
+    <path d="M21 33H39L40.5 38H19.5L21 33Z" fill="#D90429" />
+    <rect x="20.5" y="39.5" width="4" height="2" rx="1" fill="#111111" />
+    <rect x="35.5" y="39.5" width="4" height="2" rx="1" fill="#111111" />
+    <path d="M16 47H44L47 50H13L16 47Z" fill="#D90429" />
+    <path d="M11 52H49L51 54.5H9L11 52Z" fill="#FFFFFF" />
+  </g>
+
+  <text x="74" y="38" font-family="'Inter', system-ui, sans-serif" font-weight="900" font-size="31" letter-spacing="-0.5" fill="#111111">
+    WHOOSH<tspan fill="#D90429">.</tspan>
+  </text>
+
+  <rect x="232" y="16" width="84" height="24" rx="4" fill="#D90429" />
+  <text x="274" y="32.5" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="13" letter-spacing="2" fill="#FFFFFF">
+    CSIRT
+  </text>
+
+  <text x="75" y="57" font-family="'Inter', system-ui, sans-serif" font-weight="600" font-size="11.5" letter-spacing="2.2" fill="#475569">
+    INCIDENT RESPONSE TEAM
+  </text>
+</svg>
